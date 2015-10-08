@@ -18,7 +18,7 @@ The local video can either be shown as overlay (default), or manually defined vi
   <div id="videocontainer"></div>
 ```
 
-![circuit-call-button](image/gif-demo.gif)
+![circuit-call-button](images/gif-demo.gif)
 
 ## Dependencies
 
