@@ -172,7 +172,7 @@ Example:
         }
 
         // To elimiate initial flicker wait 100ms
-        if (call.participants.length && call.participants[0].video !== undefined) {
+        if (call.participants.length && call.participants[0].videoStream !== undefined) {
           if (call.participants[0].videoStream !== self._peerVideoElem.srcObject) {
             self._peerVideoElem.style.display = 'none';
             self._peerVideoElem.srcObject = call.participants[0].videoStream;
