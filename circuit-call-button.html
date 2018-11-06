@@ -156,15 +156,15 @@ Example:
         self._call = call;
 
         self.$.callBtn.textContent = 'End Call';
-        self.$.audio.src = call.remoteAudioUrl;
+        self.$.audio.srcObject = call.remoteAudioStream;
 
         self._controls && (call.isEstablished ? self._controls.enable() : self._controls.disable());
 
         // To elimiate initial flicker wait 100ms
         if (self._localVideoElem) {
-          if (call.localVideoUrl !== undefined && call.localVideoUrl !== self._localVideoElem.src) {
+          if (call.localVideoStream && call.localVideoStream !== self._localVideoElem.srcObject) {
             self._localVideoElem.style.display = 'none';
-            self._localVideoElem.src = call.localVideoUrl;
+            self._localVideoElem.srcObject = call.localVideoStream;
             window.setTimeout(function () {
               self._localVideoElem.style.display = '';
             }, 100);
@@ -172,10 +172,10 @@ Example:
         }
 
         // To elimiate initial flicker wait 100ms
-        if (call.participants.length && call.participants[0].videoUrl !== undefined) {
-          if (call.participants[0].videoUrl !== self._peerVideoElem.src) {
+        if (call.participants.length && call.participants[0].video !== undefined) {
+          if (call.participants[0].videoStream !== self._peerVideoElem.srcObject) {
             self._peerVideoElem.style.display = 'none';
-            self._peerVideoElem.src = call.participants[0].videoUrl;
+            self._peerVideoElem.srcObject = call.participants[0].videoStream;
             window.setTimeout(function () {
               self._peerVideoElem.style.display = '';
             }, 300);
