@@ -1,0 +1,23 @@
+{
+  "name": "circuit-call-button",
+  "description": "Web component showing a button to start a Circuit call",
+  "version": "0.0.1",
+  "main": "circuit-call-button.js",
+  "author": "Unify Inc.",
+  "contributors": [
+    "Roger Urscheler <roger.urscheler@atos.net>"
+  ],
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/circuit/circuit-call-button",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/circuit/circuit-call-button"
+  },
+  "keywords": [
+    "web components",
+    "webrtc",
+    "circuit",
+    "collaboration",
+    "sdk"
+  ]
+}
